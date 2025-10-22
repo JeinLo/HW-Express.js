@@ -15,9 +15,9 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    minlength: 5,
+    minlength: 4,
   },
-  books: [{ type: mongoose.Schema.Types.ObjectId, ref: 'book', default: [] }],
+  books: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Book', default: [] }],
 });
 
 module.exports = mongoose.model('User', userSchema);
